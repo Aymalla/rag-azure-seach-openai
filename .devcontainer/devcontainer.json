@@ -1,0 +1,70 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+  "name": "RAG - Azure Search and OpenAI Integration",
+  // Docker Image
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  // An array of Docker CLI arguments that should be used when running the container
+  //"runArgs": ["--env-file",".env"],
+  //"mounts": [],
+  // Available Features: https://containers.dev/features
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:latest": {},
+    "ghcr.io/devcontainers/features/azure-cli:latest": {},
+    "ghcr.io/devcontainers/features/github-cli:latest": {},
+    "ghcr.io/devcontainers/features/powershell:latest": {},
+    "ghcr.io/azure/azure-dev/azd:latest": {},
+    "ghcr.io/devcontainers/features/dotnet:latest": { "version": "8.0" },
+    "ghcr.io/devcontainers/features/node:latest": { },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12",
+      "installTools":"true",
+      "installJupyterlab":"true"
+    }
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [5000],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+  "hostRequirements": { "memory": "8gb" },
+  // Description for extension: https://marketplace.visualstudio.com/items?itemName={extension-name}
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.blazorwasm-companion",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-azuretools.azure-dev",
+        "ms-azuretools.vscode-docker",
+        "ms-azuretools.vscode-azurecontainerapps",
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-azuretools.vscode-azurestorage",
+        "ms-vscode.makefile-tools",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "ms-kubernetes-tools.vscode-aks-tools",
+        "ms-kubernetes-tools.aks-devx-tools",
+        "ms-python.python",
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-boot-dev-pack",
+        "vscjava.vscode-gradle",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "github.copilot",
+        "github.copilot-chat",
+        "streetsidesoftware.code-spell-checker",
+        "eamodio.gitlens",
+        "bierner.markdown-mermaid",
+        "anweber.vscode-httpyac",
+        "davidanson.vscode-markdownlint",
+        "jmrog.vscode-nuget-package-manager",
+        "aliasadidev.nugetpackagemanagergui",
+        "esbenp.prettier-vscode",
+        "ipedrazas.kubernetes-snippets",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
+  // uncomment to connect as non-root user. More info: https://aka.ms/dev-containers-non-root.
+  //"remoteUser": "vscode"
+}
