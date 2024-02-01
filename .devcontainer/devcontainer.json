@@ -45,6 +45,7 @@
         "ms-kubernetes-tools.vscode-aks-tools",
         "ms-kubernetes-tools.aks-devx-tools",
         "ms-python.python",
+        "ms-toolsai.jupyter",
         "vscjava.vscode-java-pack",
         "vmware.vscode-boot-dev-pack",
         "vscjava.vscode-gradle",
